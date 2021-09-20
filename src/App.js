@@ -41,7 +41,13 @@ function App(){
   }
 
   const calculate = () => {
-    setCalc(eval(calc).toString());
+    
+    if(calc==''){
+      setCalc("");
+    }else{
+      setResult("0")
+      setCalc(eval(calc).toString());
+    }
   }
 
   const deleteLast = () => {
